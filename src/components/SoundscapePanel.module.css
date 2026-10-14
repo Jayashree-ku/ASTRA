@@ -1,0 +1,208 @@
+.panel {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 2rem;
+  color: rgba(180, 220, 255, 0.9);
+  font-family: 'Courier New', monospace;
+  pointer-events: all;
+}
+
+.header { margin-bottom: 1.25rem; }
+
+.title {
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  color: #00eeff;
+  margin: 0 0 0.4rem;
+  text-shadow: 0 0 20px rgba(0,238,255,0.4);
+}
+
+.subtitle {
+  font-size: 0.7rem;
+  color: rgba(150,200,255,0.6);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.nowPlaying {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  border-radius: 3px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+.playDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid rgba(0, 200, 255, 0.35);
+  color: rgba(0, 200, 255, 0.8);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  padding: 0.45rem 1.2rem;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: #00eeff;
+  color: #00eeff;
+  background: rgba(0,238,255,0.06);
+}
+
+.btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.btnMuted {
+  border-color: rgba(255, 180, 0, 0.4);
+  color: rgba(255, 180, 0, 0.7);
+}
+
+.rasaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .rasaGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.rasaCard {
+  position: relative;
+  background: rgba(0, 10, 30, 0.7);
+  border: 1px solid rgba(0, 200, 255, 0.15);
+  border-radius: 4px;
+  padding: 1.2rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease;
+  color: inherit;
+  overflow: hidden;
+}
+
+.rasaCard:hover {
+  border-color: rgba(0, 200, 255, 0.4);
+  background: rgba(0, 20, 60, 0.7);
+  transform: translateY(-2px);
+}
+
+.rasaActive {
+  background: rgba(0, 20, 60, 0.8);
+}
+
+.rasaOrb {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 0.6rem;
+}
+
+.rasaName {
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+  color: rgba(200, 230, 255, 0.9);
+}
+
+.rasaLabel {
+  font-size: 0.6rem;
+  color: rgba(150, 200, 255, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.activeIndicator {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 0.5rem;
+}
+
+.activeIndicator span {
+  display: inline-block;
+  width: 3px;
+  height: 12px;
+  background: currentColor;
+  border-radius: 2px;
+  animation: bar 0.8s ease-in-out infinite alternate;
+}
+
+.activeIndicator span:nth-child(2) { animation-delay: 0.2s; }
+.activeIndicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bar {
+  from { transform: scaleY(0.3); }
+  to   { transform: scaleY(1); }
+}
+
+.description {
+  border: 1px solid;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.descTitle {
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.descText {
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: rgba(150, 200, 255, 0.7);
+  margin: 0;
+}
+
+.footNote {
+  font-size: 0.62rem;
+  color: rgba(100,160,220,0.45);
+  line-height: 1.6;
+  border-top: 1px solid rgba(0,200,255,0.1);
+  padding-top: 0.75rem;
+  margin: 0;
+}

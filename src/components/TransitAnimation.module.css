@@ -1,0 +1,77 @@
+.container {
+  margin-bottom: 1rem;
+  background: rgba(2, 8, 20, 0.7);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.label {
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: #00eeff;
+  margin-bottom: 0.75rem;
+}
+
+.scene {
+  position: relative;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff8cc 30%, #ffaa00 60%, transparent 100%);
+  box-shadow: 0 0 40px 20px rgba(255, 180, 0, 0.4);
+  transition: filter 0.1s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.planet {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2255aa 40%, #113388 100%);
+  box-shadow: 0 0 10px 4px rgba(0, 100, 255, 0.3);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: left 0.05s linear;
+}
+
+.fluxBar {
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  background: rgba(0,200,255,0.15);
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.fluxFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00eeff, #0088ff);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.fluxLabel {
+  position: absolute;
+  bottom: 14px;
+  right: 12px;
+  font-size: 0.6rem;
+  color: rgba(0,200,255,0.7);
+  font-family: 'Courier New', monospace;
+  z-index: 3;
+}

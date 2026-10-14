@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ASTRA — Beyond the Stars</string>
+    <string name="title_activity_main">ASTRA — Beyond the Stars</string>
+    <string name="package_name">com.astra.beyondthestars</string>
+    <string name="custom_url_scheme">com.astra.beyondthestars</string>
+</resources>

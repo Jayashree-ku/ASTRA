@@ -1,0 +1,202 @@
+.hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 10, 24, 0.96) 0%,
+    rgba(2, 10, 24, 0.6) 80%,
+    transparent 100%
+  );
+  backdrop-filter: blur(12px) saturate(1.4);
+  border-bottom: 1px solid rgba(0, 220, 255, 0.1);
+  gap: 1rem;
+}
+
+/* ── Brand ─────────────────────────────────────────────────── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.28em;
+  color: #00eeff;
+  text-shadow: 0 0 24px rgba(0, 238, 255, 0.75), 0 0 60px rgba(0, 150, 255, 0.3);
+  line-height: 1;
+}
+
+.brandTag {
+  font-size: 0.5rem;
+  letter-spacing: 0.32em;
+  color: rgba(0, 200, 255, 0.55);
+  text-transform: uppercase;
+  margin-top: 1px;
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Nav ────────────────────────────────────────────────────── */
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 15, 40, 0.5);
+  border: 1px solid rgba(0, 200, 255, 0.15);
+  color: rgba(160, 210, 255, 0.65);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+}
+
+.navIcon {
+  font-size: 0.9rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.navLabel {
+  /* hide on very small screens */
+}
+
+.navBtn:hover {
+  border-color: rgba(0, 238, 255, 0.5);
+  color: #00eeff;
+  background: rgba(0, 238, 255, 0.06);
+  box-shadow: 0 0 14px rgba(0, 238, 255, 0.18);
+}
+
+.navBtn.active {
+  border-color: #00eeff;
+  color: #00eeff;
+  background: rgba(0, 238, 255, 0.1);
+  box-shadow: 0 0 18px rgba(0, 238, 255, 0.28);
+}
+
+.navBtn.active .navIcon {
+  opacity: 1;
+  text-shadow: 0 0 10px #00eeff;
+}
+
+/* ── Actions group ──────────────────────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.galleryBtn,
+.deviceBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  font-family: 'Courier New', monospace;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.galleryBtn {
+  background: rgba(0, 238, 255, 0.08);
+  border: 1px solid rgba(0, 238, 255, 0.4);
+  color: #00eeff;
+}
+
+.galleryBtn:hover {
+  background: rgba(0, 238, 255, 0.2);
+  box-shadow: 0 0 12px rgba(0, 238, 255, 0.3);
+}
+
+.deviceBtn {
+  background: rgba(0, 255, 180, 0.06);
+  border: 1px solid rgba(0, 255, 180, 0.3);
+  color: #00ffcc;
+}
+
+.deviceBtn:hover,
+.deviceActive {
+  background: rgba(0, 255, 180, 0.18);
+  border-color: #00ffcc;
+  box-shadow: 0 0 12px rgba(0, 255, 180, 0.3);
+}
+
+.actionIcon {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+/* ── Status bar ─────────────────────────────────────────────── */
+.statusBar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-left: 0.4rem;
+  border-left: 1px solid rgba(0, 200, 255, 0.15);
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ffcc;
+  box-shadow: 0 0 8px #00ffcc;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+
+.statusText {
+  font-size: 0.52rem;
+  letter-spacing: 0.15em;
+  color: rgba(0, 255, 180, 0.55);
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .actionLabel { display: none; }
+  .galleryBtn, .deviceBtn { padding: 0.35rem 0.5rem; }
+}
+
+@media (max-width: 600px) {
+  .hud { padding: 0.5rem 0.8rem; }
+  .brandName { font-size: 1.05rem; letter-spacing: 0.2em; }
+  .navLabel { display: none; }
+  .navBtn { padding: 0.38rem 0.55rem; gap: 0; }
+  .statusBar { display: none; }
+}

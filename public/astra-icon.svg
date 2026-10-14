@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" fill="#020a18"/>
+  <!-- Outer ring -->
+  <circle cx="96" cy="96" r="86" stroke="#00eeff" stroke-width="2" fill="none" opacity="0.4"/>
+  <!-- Star glow -->
+  <circle cx="96" cy="96" r="52" fill="#002244" opacity="0.8"/>
+  <circle cx="96" cy="96" r="38" fill="#ffaa00" opacity="0.9"/>
+  <circle cx="96" cy="96" r="28" fill="#fff5cc"/>
+  <!-- Planet orbit -->
+  <ellipse cx="96" cy="96" rx="72" ry="30" stroke="#00aaff" stroke-width="1.2" fill="none" opacity="0.3" transform="rotate(-20 96 96)"/>
+  <!-- Planet -->
+  <circle cx="148" cy="78" r="10" fill="#1a6fbd" opacity="0.95"/>
+  <circle cx="148" cy="78" r="13" fill="#44aaff" opacity="0.2"/>
+  <!-- A letter -->
+  <text x="96" y="162" text-anchor="middle" font-family="monospace" font-weight="900"
+        font-size="22" fill="#00eeff" opacity="0.9" letter-spacing="8">ASTRA</text>
+</svg>

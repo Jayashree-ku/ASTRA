@@ -1,0 +1,26 @@
+{
+  "name": "ASTRA — Beyond the Stars",
+  "short_name": "ASTRA",
+  "description": "One tiny dip. A whole new world. — Immersive 3D space science prototype.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#020a18",
+  "theme_color": "#00eeff",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["education", "science", "entertainment"]
+}
